@@ -23,8 +23,6 @@ export class ReminderComponent implements OnInit, OnDestroy {
         const rem = new ReminderModel(item.time, item.name);
         this.reminders.push(rem);
       }
-      console.log('data', data);
-      console.log('rems', this.reminders);
     });
   }
 
