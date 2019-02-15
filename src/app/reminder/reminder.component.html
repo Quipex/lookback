@@ -1,4 +1,10 @@
-<button>add</button>
+<button mat-raised-button
+        (click)="addReminder()"
+        class="btn-add">
+  add
+</button>
 <div class="rem-list-container">
-    <qpx-rems-list *ngFor="let rem of reminders" [reminder]="rem"></qpx-rems-list>
+  <qpx-reminder-cell *ngFor="let rem of reminders"
+                     [reminder]="rem"
+                     (click)="deleteRem($event)"></qpx-reminder-cell>
 </div>

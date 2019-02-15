@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {ReminderComponent} from './reminder.component';
+import {RemCellComponent} from './rem-cell.component';
 
-describe('ReminderComponent', () => {
-  let component: ReminderComponent;
-  let fixture: ComponentFixture<ReminderComponent>;
+describe('RemCellComponent', () => {
+  let component: RemCellComponent;
+  let fixture: ComponentFixture<RemCellComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ReminderComponent]
+      declarations: [RemCellComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReminderComponent);
+    fixture = TestBed.createComponent(RemCellComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

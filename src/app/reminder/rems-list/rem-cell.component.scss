@@ -1,0 +1,33 @@
+.rem-cell {
+  &__container {
+    width: 100%;
+    text-align: -webkit-left;
+
+    &:hover {
+      background-color: gray;
+      color: white;
+    }
+  }
+
+  &__text {
+    padding: 1em;
+  }
+}
+
+.cell {
+  &__name {
+    color: rgb(20, 20, 20);
+  }
+
+  &__time {
+    background-color: brown;
+    color: white;
+    padding: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    width: 50px;
+    overflow-x: visible;
+    line-height: normal;
+    text-align: center;
+  }
+}

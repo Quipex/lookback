@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ReminderStore } from './rems-list/reminder-data/reminder-store.service';
-import { Subscription } from 'rxjs';
-import { ReminderModel } from './rems-list/reminder-data/reminder.model';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {ReminderStore} from './rems-list/reminder-data/reminder-store.service';
+import {Subscription} from 'rxjs';
+import {ReminderModel} from './rems-list/reminder-data/reminder.model';
 
 @Component({
   selector: 'qpx-reminder',
@@ -9,20 +9,17 @@ import { ReminderModel } from './rems-list/reminder-data/reminder.model';
   styleUrls: ['./reminder.component.scss']
 })
 export class ReminderComponent implements OnInit, OnDestroy {
-  public reminders: ReminderModel[];
+  public reminders: Set<ReminderModel>;
   private remStoreSub: Subscription;
 
   constructor(
-    private remStore: ReminderStore
-  ) { }
+    private remStore: ReminderStore,
+  ) {
+  }
 
   ngOnInit() {
-    this.remStoreSub = this.remStore.getAll().subscribe((data: ReminderModel[]) => {
-      this.reminders = [];
-      for (const item of data) {
-        const rem = new ReminderModel(item.time, item.name);
-        this.reminders.push(rem);
-      }
+    this.remStoreSub = this.remStore.getAll().subscribe((data: Set<ReminderModel>) => {
+      this.reminders = data;
     });
   }
 
@@ -30,5 +27,14 @@ export class ReminderComponent implements OnInit, OnDestroy {
     if (this.remStoreSub) {
       this.remStoreSub.unsubscribe();
     }
+  }
+
+  addReminder() {
+    const newRem = new ReminderModel(new Date(), 'sampleRem');
+    this.remStore.add(newRem);
+  }
+
+  deleteRem(rem: ReminderModel) {
+    this.remStore.delete(rem);
   }
 }
