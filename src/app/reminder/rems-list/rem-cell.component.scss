@@ -19,7 +19,7 @@
 
 .cell {
   &__time {
-    background-color: brown;
+    background-color: #a52a2a;
     color: white;
     border-radius: 4px;
     margin-right: 5px;
@@ -27,6 +27,10 @@
     min-width: 50px;
     overflow-x: visible;
     text-align: center;
+
+    &:hover {
+      background-color: #a50e0e;
+    }
   }
 
   &__name {
