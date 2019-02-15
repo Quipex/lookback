@@ -2,6 +2,7 @@
   &__container {
     width: 100%;
     text-align: -webkit-left;
+    padding: 0;
 
     &:hover {
       background-color: gray;
@@ -11,24 +12,31 @@
 
   &__text {
     padding: 1em;
+    display: flex;
+    line-height: normal;
   }
 }
 
 .cell {
-  &__name {
-    color: rgb(20, 20, 20);
-  }
-
   &__time {
     background-color: brown;
     color: white;
-    padding: 5px;
-    margin-right: 5px;
-    display: inline-block;
-    width: 50px;
-    overflow-x: visible;
-    line-height: normal;
-    text-align: center;
     border-radius: 4px;
+    margin-right: 5px;
+    width: 50px;
+    min-width: 50px;
+    overflow-x: visible;
+    text-align: center;
   }
+
+  &__name {
+    color: #3d3d3d;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.padded {
+  padding: 5px;
 }
