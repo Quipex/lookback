@@ -1,0 +1,9 @@
+<div (click)="onClick()"
+     *ngIf="reminder"
+     class="rem-cell__container"
+     matRipple>
+  <div class="rem-cell__text">
+    <span class="cell__time" title="{{reminder.time | date: 'dd.MM.yyyy HH:mm:ss'}}">{{reminder.passed}}</span>
+    <span class="cell__name">{{reminder.name}}</span>
+  </div>
+</div>

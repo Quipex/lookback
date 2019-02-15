@@ -1,4 +1,9 @@
 .rem-list-container {
-    display:flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-add {
+  width: 100%;
+  margin-bottom: 1em;
 }

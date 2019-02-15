@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { ReminderStore } from './reminder-store.service';
+import {ReminderStore} from './reminder-store.service';
 
 describe('ReminderStoreService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
