@@ -1,0 +1,27 @@
+.rem-cell {
+    &__container {
+        width: 100%;
+
+        &:hover {
+            background-color: gray;
+            color: white;    
+        }
+    }
+
+    &__text {
+       padding: 1em;
+    }
+}
+
+.cell {
+    &__name {
+        
+    }
+
+    &__time {
+        background-color: brown;
+        color: white;
+        padding: 5px;
+        margin-right: 5px;
+    }
+}
